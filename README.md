@@ -1,4 +1,4 @@
-# Language-Basic: Coding Interview Reference
+# Language Basics: Coding Interview Reference
 
 This repository serves as a reference guide for common coding operations in multiple programming languages. The aim is to provide easy to understand and ready to use code snippets that are often forgotten but frequently used in coding interviews.
 

@@ -6,12 +6,12 @@ Each directory in this repository represents a different language and contains a
 
 The following languages are included:
 
-- [C++](./C++/README.md)
-- [Golang](./Golang/README.md)
-- [Java](./Java/README.md)
-- [JavaScript](./JavaScript/README.md)
-- [Python](./Python/README.md)
-- [Rust](./Rust/README.md)
+- [C++](./c++)
+- [Golang](./golang)
+- [Java](./java)
+- [JavaScript](./js)
+- [Python](./python)
+- [Rust](./rust)
 
 Each language-specific README covers the following topics:
 

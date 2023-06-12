@@ -7,7 +7,6 @@ Here, you will find code snippets for:
 1. Reading from and writing to files.
 2. Reading input from the console.
 3. Splitting strings.
-4. Understanding the string length (Hint: it's a built-in function).
 5. Declaring and using 2D slices.
 6. Golang handles null-terminated strings implicitly.
 

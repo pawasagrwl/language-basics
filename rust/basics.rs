@@ -1,7 +1,3 @@
-
-And here is the `basics.rs` file:
-
-```rust
 use std::fs::File;
 use std::io::prelude::*;
 use std::collections::HashMap;

@@ -1,37 +1,65 @@
 const fs = require('fs');
 const readline = require('readline');
 
-// 1. Reading from and writing to files
-function fileReadWrite() {
+function fileIO() {
     fs.writeFileSync('test.txt', 'Hello World!');
-    console.log(fs.readFileSync('test.txt', 'utf8'));
+
+    let data = fs.readFileSync('test.txt', 'utf8');
+    console.log(data);
 }
 
-// 2. Reading input from the console
-async function readConsole() {
+function consoleInput() {
     const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
     });
 
-    rl.question('Enter a string: ', (input) => {
-        console.log(`You entered: ${input}`);
+    rl.question('Enter a string: ', (answer) => {
+        console.log(`You entered: ${answer}`);
         rl.close();
     });
 }
 
-// 3. Splitting strings
-function splitString(str) {
-    console.log(str.split(" "));
+function stringSplit() {
+    let str = "This is a test string.";
+    let results = str.split(" ");
+    console.log(results);
 }
 
-// 5. Declare and use 2D arrays
-function twoDimensionalArrays() {
+function stringLength() {
+    let str = "Test string";
+    console.log(str.length);
+}
+
+function twoDArrays() {
     let arr = [[1, 2, 3], [4, 5, 6]];
     console.log(arr);
 }
 
-fileReadWrite();
-readConsole();
-splitString("This is a test string.");
-twoDimensionalArrays();
+function hashMapUsage() {
+    let hashmap = {};
+    hashmap["one"] = 1;
+    hashmap["two"] = 2;
+    console.log(hashmap);
+}
+
+function arrayLength() {
+    let arr = [1, 2, 3, 4, 5];
+    console.log(arr.length);
+}
+
+function arrayModification() {
+    let arr = [1, 2, 3, 4, 5];
+    arr.push(6); // Adding an element to the array
+    arr.splice(2, 1); // Removing the 3rd element from the array
+    console.log(arr);
+}
+
+fileIO();
+consoleInput();
+stringSplit();
+stringLength();
+twoDArrays();
+hashMapUsage();
+arrayLength();
+arrayModification();

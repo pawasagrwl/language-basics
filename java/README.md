@@ -1,4 +1,4 @@
-# C++ Basic Coding Interview Reference
+# Java Basic Coding Interview Reference
 
 This repository is a reference guide for common operations in Java, which are often forgotten but frequently used in coding interviews.
 

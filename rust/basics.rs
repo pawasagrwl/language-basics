@@ -1,43 +1,73 @@
+
+And here is the `basics.rs` file:
+
+```rust
 use std::fs::File;
-use std::io::{self, prelude::*, BufReader};
+use std::io::prelude::*;
+use std::collections::HashMap;
+use std::io::{self, Write};
 
-// 1. Reading from and writing to files
-fn fileReadWrite() -> io::Result<()> {
-    let mut file = File::create("test.txt")?;
-    file.write_all(b"Hello World!")?;
+fn file_io() {
+    let mut file = File::create("test.txt").unwrap();
+    file.write_all(b"Hello World!").unwrap();
 
-    let file = File::open("test.txt")?;
-    let reader = BufReader::new(file);
-
-    for line in reader.lines() {
-        println!("{}", line?);
-    }
-    Ok(())
+    let mut file = File::open("test.txt").unwrap();
+    let mut contents = String::new();
+    file.read_to_string(&mut contents).unwrap();
+    println!("{}", contents);
 }
 
-// 2. Reading input from the console
-fn readConsole() {
+fn console_input() {
+    print!("Enter a string: ");
+    io::stdout().flush().unwrap();
+
     let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("Failed to read line");
-    println!("You entered: {}", input);
+    io::stdin().read_line(&mut input).unwrap();
+    println!("You entered: {}", input.trim());
 }
 
-// 3. Splitting strings
-fn splitString(s: &str) {
-    let split: Vec<&str> = s.split(" ").collect();
-    println!("{:?}", split);
+fn string_split() {
+    let s = "This is a test string.";
+    let parts: Vec<&str> = s.split(' ').collect();
+    println!("{:?}", parts);
 }
 
-// 5. Declare and use 2D vectors
-fn twoDimensionalVectors() {
-    let vec = vec![vec![1, 2, 3], vec![4, 5, 6]];
-    println!("{:?}", vec);
+fn string_length() {
+    let s = "Test string";
+    println!("{}", s.len());
 }
 
-fn main() -> io::Result<()> {
-    fileReadWrite()?;
-    readConsole();
-    splitString("This is a test string.");
-    twoDimensionalVectors();
-    Ok(())
+fn two_d_vectors() {
+    let arr = vec![vec![1, 2, 3], vec![4, 5, 6]];
+    println!("{:?}", arr);
+}
+
+fn hashmap_usage() {
+    let mut map: HashMap<String, i32> = HashMap::new();
+    map.insert("one".to_string(), 1);
+    map.insert("two".to_string(), 2);
+    println!("{:?}", map);
+}
+
+fn array_length() {
+    let arr = [1, 2, 3, 4, 5];
+    println!("{}", arr.len());
+}
+
+fn vector_modification() {
+    let mut arr = vec![1, 2, 3, 4, 5];
+    arr.push(6); // Adding an element to the array
+    arr.remove(2); // Removing the 3rd element from the array
+    println!("{:?}", arr);
+}
+
+fn main() {
+    file_io();
+    console_input();
+    string_split();
+    string_length();
+    two_d_vectors();
+    hashmap_usage();
+    array_length();
+    vector_modification();
 }

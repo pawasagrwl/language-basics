@@ -1,6 +1,6 @@
 # C++ Basic Coding Interview Reference
 
-This repository is a reference guide for common operations in C++, which are often forgotten but frequently used in coding interviews.
+This repository is a reference guide for common operations in Go, which are often forgotten but frequently used in coding interviews.
 
 Here, you will find code snippets for:
 
